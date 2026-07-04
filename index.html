@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>طالب علم حاضری</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-labelledby="app-title">
+      <section class="hero-card">
+        <p class="eyebrow">اساتذہ کے لیے آسان ایپ</p>
+        <h1 id="app-title">طالب علم حاضری</h1>
+        <p class="intro">نام شامل کریں، حاضر یا غیر حاضر نشان لگائیں، اور پوری فہرست ایک نظر میں دیکھیں۔</p>
+      </section>
+
+      <section class="panel" aria-labelledby="add-student-heading">
+        <h2 id="add-student-heading">نیا طالب علم شامل کریں</h2>
+        <form id="student-form" class="student-form">
+          <label for="student-name">طالب علم کا نام</label>
+          <div class="form-row">
+            <input id="student-name" name="studentName" type="text" placeholder="مثلاً احمد علی" autocomplete="off" required />
+            <button type="submit">شامل کریں</button>
+          </div>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">آج کی حاضری</h2>
+        <div class="summary-grid" aria-live="polite">
+          <div class="summary-card present">
+            <span id="present-count">0</span>
+            <small>حاضر</small>
+          </div>
+          <div class="summary-card absent">
+            <span id="absent-count">0</span>
+            <small>غیر حاضر</small>
+          </div>
+          <div class="summary-card total">
+            <span id="total-count">0</span>
+            <small>کل طلبہ</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="student-list-heading">
+        <div class="list-header">
+          <h2 id="student-list-heading">طلبہ کی فہرست</h2>
+          <button id="reset-button" class="link-button" type="button">حاضری صاف کریں</button>
+        </div>
+        <ul id="student-list" class="student-list"></ul>
+        <p id="empty-state" class="empty-state">ابھی کوئی طالب علم شامل نہیں۔ اوپر نام لکھ کر شروع کریں۔</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
